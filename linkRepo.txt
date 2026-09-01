@@ -1,1 +1,1 @@
-https://github.com/Taitur/Practica1HTMLTec.git
+https://github.com/Taitur/Practica1CSSTec.git

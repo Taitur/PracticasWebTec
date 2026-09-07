@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Home</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -19,29 +19,18 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <div class="navbar-nav">
-            <a class="nav-link" href="index">Login</a>
+            <a class="nav-link" href="login">Login</a>
             <a class="nav-link" href="tags">Tags</a>
             <a class="nav-link" href="profile">Profile</a>
             <a class="nav-link" href="form">Form</a>
+            <a class="nav-link" href="home">Home</a>
         </div>
     </nav>
 
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 70vh;">
-        <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
-            <h3 class="text-center mb-4">LOGIN</h3>
-            <form>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username:</label>
-                    <input type="text" class="form-control" id="username" name="username">
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="password" name="password">
-                </div>
-                <button type="button" id="btn" class="btn btn-primary w-100">Login</button>
-            </form>
-        </div>
-    </div>
+    <h1>Bienvenido a la página de inicio</h1>
+
+    <button type="button" id="btnshowusr" >Mostrar usuario</button>
+    <p id="usr" hidden></p>
 
 </body>
 </html>

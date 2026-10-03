@@ -10,6 +10,7 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
+    <script src="profile.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,14 +22,10 @@
     </nav>
     <h1>Perfil</h1>
     <img src="../Foto_perfil.jpeg" width="250" alt="Foto de perfil">
-    <h2>Información personal</h2>
-    <h3>Nombre: </h3> <p>Beñat</p>
-    <h3>Apellido: </h3> <p>Arruti</p>
-    <h3>Edad: </h3> <p>20</p>
-    <h3>País: </h3> <p>España</p>
-    <h2>Información académica</h2>
-    <h3>Universidad: </h3> <p>Universidad del País Vasco</p>
-    <h3>Carrera: </h3> <p>Ingeniería Informática (ITC)</p>
-    <h3>Grado: </h3> <p>4. año / 7.semetre</p>
+    <h2>Información personal</h2>        <button id="editProfile" class ="btn btn-primary">Editar Datos</button>  <button id="deleteUser" class ="btn btn-primary">Eliminar Cuenta</button>
+    <h3>Nombre: </h3> <p id="nameProfile"></p>
+    <h3>Username: </h3> <p id="usernameProfile"></p>
+    <h3>Edad: </h3> <p id="ageProfile"></p>
+    <h3>Puntos: </h3> <p id="pointsProfile"></p>
 </body>
 </html>

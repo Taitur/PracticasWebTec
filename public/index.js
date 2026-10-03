@@ -1,50 +1,32 @@
-const express = require("express");
-const path = require("path");
-const {isAuth} = require("./middlewares.js");
+const main = () => {
+    const username = document.getElementById("username")
+    const password = document.getElementById("password")
+    const btn = document.getElementById("btn")
+    const btnGoRegister = document.getElementById("btnGoRegister")
 
+    const login = async () => {
+        const user = {
+            username: username.value,
+            password: password.value
+        }
 
-const app = express();
-const PORT = 3000;
-const URL = "http://localhost:"+PORT;
+        const res = await fetch(`http://localhost:3000/login`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+        const data = await res.json()
+        localStorage.setItem("userId", data.id.toString())
+        window.location.href = "profile.html"
+    }
 
+    btn.addEventListener("click", login)
+    btnGoRegister.addEventListener("click", () => {
+        window.location.href = "register.html"
+    })
 
-app.use(express.static("public"))
-app.use(express.static("public/img"))
-app.use(express.json())
+}
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'))
-});
-app.get("/index", (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'))
-});
-
-app.get("/login", (req, res) =>{
-
-   res.sendFile(path.join(__dirname, 'index.html'))
-})
-
-app.get("/tags", (req, res) =>{
-
-    res.sendFile(path.join(__dirname,'tags.html'))
-})
-app.get("/profile", (req, res) =>{
-
-    res.sendFile(path.join(__dirname, 'profile.html'))
-})
-
-app.get("/form", (req, res) =>{
-
-    res.sendFile(path.join(__dirname, 'form.html'))
-})
-
-app.get("/home", (req, res) =>{
-
-    res.sendFile(path.join(__dirname, 'home.html'))
-})
-
-
-
-app.listen( PORT, () =>{
-    console.log("Corriendo en la dirección: " + URL)
-})
+window.onload = main

@@ -7,6 +7,7 @@ const usersRoutes = require(path.join(__dirname,"routes", "users.routes.js"))
 const loginRoutes = require(path.join(__dirname,"routes", "login.routes.js"))
 const marcoRoutes = require(path.join(__dirname,"routes", "marco.routes.js"))
 const pingRoutes = require(path.join(__dirname,"routes", "ping.routes.js"))
+const juegoRoutes = require(path.join(__dirname, "routes","juego.routes.js"))
 
 
 
@@ -23,6 +24,7 @@ app.use("/users", usersRoutes)
 app.use("/login", loginRoutes)
 app.use("/marco", marcoRoutes)
 app.use("/ping", pingRoutes)
+app.use("/juego", juegoRoutes)
 
 
 

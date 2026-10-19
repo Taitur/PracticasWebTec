@@ -6,8 +6,10 @@ const main = async () => {
     const editButton = document.getElementById("editProfile")
     const deleteButton = document.getElementById("deleteUser")
 
-    console.log(localStorage.getItem("userId"))
-    const user = await fetch(`http://localhost:3000/users/${localStorage.getItem("userId")}`)
+    const userId = localStorage.getItem("userId")
+    const iframe = document.getElementById("gameIframe")
+    iframe.setAttribute("src", `juego.html?user_id=${userId}`)
+    const user = await fetch(`http://localhost:3000/users/${userId}`)
     const userData = await user.json()
     namePro.innerText = userData.name
     usernamePro.innerText = userData.username
